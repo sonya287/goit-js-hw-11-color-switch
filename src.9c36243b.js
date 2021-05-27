@@ -1,0 +1,16 @@
+parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"amqR":[function(require,module,exports) {
+
+},{}],"VyiV":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var t={body:document.body,start:document.querySelector('[data-action="start"]'),stop:document.querySelector('[data-action="stop"]')};exports.default=t;
+},{}],"eBFU":[function(require,module,exports) {
+module.exports=["#FFFFFF","#2196F3","#4CAF50","#FF9800","#009688","#795548"];
+},{}],"dTWr":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=(e,t)=>Math.floor(Math.random()*(t-e+1)+e);exports.default=e;
+},{}],"s0ca":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=u(require("./refs")),r=u(require("../colors.json")),t=u(require("./randomValue"));function u(e){return e&&e.__esModule?e:{default:e}}var l=()=>{let u=(0,t.default)(0,r.default.length-1);e.default.body.style.backgroundColor=r.default[u]};exports.default=l;
+},{"./refs":"VyiV","../colors.json":"eBFU","./randomValue":"dTWr"}],"A3kj":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.stopButton=exports.startButton=void 0;var t=s(require("./refs")),e=s(require("./changeColor"));function s(t){return t&&t.__esModule?t:{default:t}}let r=null;const a=()=>{r=setInterval(e.default,1e3),t.default.start.disabled=!0,t.default.start.classList.add("disabled")};exports.startButton=a;const l=()=>{clearInterval(r),t.default.start.disabled=!1,t.default.start.classList.remove("disabled")};exports.stopButton=l;
+},{"./refs":"VyiV","./changeColor":"s0ca"}],"Focm":[function(require,module,exports) {
+"use strict";require("./css/style.css");var t=s(require("./js/refs")),e=require("./js/actionButtons");function s(t){return t&&t.__esModule?t:{default:t}}t.default.start.addEventListener("click",e.startButton),t.default.stop.addEventListener("click",e.stopButton);
+},{"./css/style.css":"amqR","./js/refs":"VyiV","./js/actionButtons":"A3kj"}]},{},["Focm"], null)
+//# sourceMappingURL=/goit-js-hw-11-color-switch/src.9c36243b.js.map
